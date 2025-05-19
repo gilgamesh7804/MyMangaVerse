@@ -1,0 +1,49 @@
+<!-- templates/signin_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="1;url={{ url_for('manga') }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signed In!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    .box {
+      text-align: center;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .box h1 {
+      margin-bottom: 1rem;
+      color: #4CAF50;
+      font-size: 2rem;
+    }
+    .box p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .box a {
+      color: #6f2dbd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>✅ You’re Signed In!</h1>
+    <p>Redirecting to MangaVerse…</p>
+    <p><a href="{{ url_for('manga') }}">Click here if it takes too long.</a></p>
+  </div>
+</body>
+</html>

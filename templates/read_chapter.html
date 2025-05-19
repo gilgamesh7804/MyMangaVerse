@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}MangaVerse | Chapter Details{% endblock %}
+{% block content %}
+<div class="chapter-page" style="padding: 40px;">
+  <div class="chapter-header" style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
+    <img src="{{ manga_image_url }}" alt="Manga Cover" style="width: 250px; border-radius: 8px;">
+    <div>
+      <h2>{{ manga_title }}</h2>
+      <p>{{ manga_description }}</p>
+    </div>
+  </div>
+
+  <h3>Reading Chapter {{ chapter.chapter_number }}</h3>
+  <p>
+    <iframe src="{{ url_for('static', filename=chapter.pdf_path) }}" width="100%" height="600px"></iframe>
+
+  </p>
+
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <title>{% block title %}MyMangaVerse{% endblock %}</title>
+  <style>
+    #search-results .manga-item {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 6px;
+    }
+
+    #search-results .manga-item img {
+      border-radius: 4px;
+    }
+  </style>
+</head>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+    <a href="{{ url_for('manga') }}" class="text-2xl font-bold">MangaVerse</a>
+
+    <form action="{{ url_for('search') }}" method="get" class="flex my-2 sm:my-0">
+      <input type="text" name="q" placeholder="Search manga..." required
+             class="px-3 py-1 rounded-l-md text-black focus:outline-none border border-gray-300">
+      <button type="submit" class="bg-blue-600 px-4 py-1 rounded-r-md hover:bg-blue-700">Search</button>
+    </form>
+
+    <ul class="flex gap-4 text-sm mt-2 sm:mt-0">
+      <li><a href="{{ url_for('manga') }}" class="hover:underline">Home</a></li>
+      <li><a href="{{ url_for('upload_chapter') }}" class="hover:underline">Upload</a></li>
+      {% if not session.username %}
+        <li><a href="{{ url_for('signin') }}" class="hover:underline">Login</a></li>
+        <li><a href="{{ url_for('register') }}" class="hover:underline">Signup</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Main Content -->
+  <main class="p-6">
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>

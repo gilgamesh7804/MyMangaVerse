@@ -1,0 +1,19 @@
+<!-- templates/registered.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="2;url={{ url_for('manga') }}">
+  <style>
+    body { display:flex; align-items:center; justify-content:center;
+           height:100vh; font-family:sans-serif; }
+    .box { text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🎉 Registration Successful!</h1>
+    <p>Redirecting to MangaVerse…</p>
+    <p><a href="{{ url_for('manga') }}">Click here if it doesn’t happen automatically.</a></p>
+  </div>
+</body>
+</html>

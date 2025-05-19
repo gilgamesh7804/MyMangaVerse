@@ -1,0 +1,372 @@
+/* === Global & Layout === */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: url("/static/Mangabg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f7f6f3;
+    color: #2c2c2c;
+  }
+  
+  .form-box {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #4aa3df;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #357ab8;
+  }
+
+  h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  a {
+    color: #6c9dc6;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ff6f61;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #e45a4f;
+  }
+/* Remove the button-like background/padding */
+.site-name {
+    display: inline-block;      /* so it sits nicely in your header */
+    background: none;            /* kill the dark box */
+    padding: 0;                  /* no more button padding */
+    margin: 0;                   /* reset any margins */
+    font-size: 24px;             /* choose a good size for your brand */
+    font-weight: bold;           /* keep it prominent */
+    color: #ffffff;              /* white text against your purple nav */
+    text-decoration: none;       /* no underline by default */
+    cursor: pointer;
+  }
+  
+  /* A subtle hover effect to show it’s clickable */
+  .site-name:hover {
+    text-decoration: underline;
+  }
+
+  /* === Header with hide-on-scroll behavior === */
+  #main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #443f8e;
+    color: white;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .header-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 14px 0;
+  margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #4aa3df;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  color: #ff6f61;
+  text-shadow: 0 0 2px #ccc;
+}
+
+  .site-name { font-size: 24px; font-weight: bold; }
+  #search-input {
+    width: 70%; max-width: 300px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+  }
+  .login-btn, .signup-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px 1px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .login-btn:hover, .signup-btn:hover {
+    background-color: #6f67c6;
+  }
+  .profile-icon {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+  }
+
+  #search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #2c2c2e;
+    color: #f1f1f1;
+  }
+  #search-input:focus {
+    outline: 2px solid #4aa3df;
+  }
+  
+
+/* Outer container aligned as columns */
+.all-manga-container.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Each column (category) box */
+.category-section {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Section title */
+.category-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #2c2c2c;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+/* Stack cards vertically in each column */
+.manga-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Vertical manga card styling */
+.manga-vertical-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.manga-vertical-card:hover {
+  transform: translateY(-4px);
+}
+
+.manga-vertical-card img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.manga-type-label {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.manga-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.manga-chapter-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.manga-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.manga-cover {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.manga-info {
+  flex: 1;
+}
+
+.manga-info h1 {
+  margin-top: 0;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.manga-info p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Chapter Box */
+.chapter-box {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.chapter-box h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.chapter-list li {
+  margin-bottom: 10px;
+}
+
+.chapter-list a {
+  text-decoration: none;
+  color: #3366cc;
+}
+
+.chapter-list a:hover {
+  text-decoration: underline;
+}
+
+.user-info {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.user-info a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #4aa3df;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+  
+  /* Responsive layout: stack columns on small screens */
+@media (max-width: 1000px) {
+  .all-manga-container.columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}

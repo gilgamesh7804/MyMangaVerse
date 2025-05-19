@@ -1,0 +1,59 @@
+/* signin.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/bg9.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 20px; /* Increased padding */
+    margin-bottom: 30px; /* Increased margin bottom */
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: larger;
+}
+
+button[type="submit"] {
+    background-color: #6e3d9a;
+    color: #fff;
+    cursor: pointer;
+    font-size: larger;
+}
+
+button[type="submit"]:hover {
+    background-color: #4a4391;
+}

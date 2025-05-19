@@ -1,0 +1,16 @@
+
+<h2>Search results for "{{ query }}"</h2>
+
+{% if results %}
+  <div class="search-results">
+    {% for manga in results %}
+    <a href="{{ url_for('show_manga', manga_id=manga.id) }}">
+        <img src="{{ url_for('static', filename=manga.cover_image) }}" alt="{{ manga.name }}">
+        <h3>{{ manga.name }}</h3>
+        <p>{{ manga.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No manga found.</p>
+{% endif %}

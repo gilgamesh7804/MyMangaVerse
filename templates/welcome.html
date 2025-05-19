@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MangaVerse</title>
+    <!-- Link to Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}"><!-- Link to your CSS file for additional styling -->
+</head>
+<body>
+    
+    <video autoplay loop muted id="bg-video">
+        <source src="/static/video2.mp4" type="video/mp4">
+        <!-- Add additional source elements for other video formats -->
+    </video>
+    <div class="welcome-container animate__animated animate__fadeIn">
+        <!-- Adding animation to the container -->
+        <h1>Welcome to MangaVerse</h1>
+        <p class="animate__animated animate__fadeInUp">Explore the world of manga!</p>
+        <!-- Adding animation to the text -->
+        <div class="buttons-container">
+            <a href="{{ url_for('manga') }}" class="btn">Enter MangaVerse</a>
+            <a href="{{ url_for('about') }}" class="btn">About</a>
+        </div>
+        <div class="header-container">
+            <nav class="nav-buttons">
+              <a href="{{ url_for('register') }}" class="btn-secondary">Register</a>
+              <a href="{{ url_for('signin') }}"   class="btn-secondary">Sign In</a>
+            </nav>
+          </div>
+    </body>
+</html>

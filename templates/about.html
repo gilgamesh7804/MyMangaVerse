@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MangaVerse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+    <header>
+        <h1>About MangaVerse</h1>
+        <nav>
+            <!-- Link to welcome page (home) -->
+            <a href="{{ url_for('welcome') }}">Home</a>
+
+            <!-- Link to manga main section -->
+            <a href="{{ url_for('manga') }}">Manga Section</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>Welcome to MangaVerse! Our mission is to provide manga enthusiasts with a platform to discover and enjoy their favorite manga titles. Whether you're a seasoned manga reader or new to the world of manga, MangaVerse is here to cater to your needs.</p>
+        </section>
+        <section>
+            <h2>About Us</h2>
+            <p>MangaVerse was founded in [Year] with the vision of creating a central hub for manga lovers worldwide. Our team is passionate about manga and dedicated to delivering high-quality content and services to our users.</p>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or feedback, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: info@mangaverse.com</li>
+                <li>Phone: 123-456-7890</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MangaVerse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
